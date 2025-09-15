@@ -5,3 +5,5 @@ pyvenv.cfg
 firmware/.pio
 firmware/.vscode
 .env
+bin
+
