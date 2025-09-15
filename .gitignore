@@ -1,0 +1,6 @@
+lib
+lib64
+include
+pyvenv.cfg
+firmware/.pio
+firmware/.vscode
