@@ -18,7 +18,7 @@ void callback(char* topic, byte* message, unsigned int length) {
   Serial.print("Message received: ");
   Serial.println(msg);
 
-  client.publish("wakeword/esp32", "ESP32 Recieved Message");
+  client.publish("esp32/response", "{\"message\": \"Hello from ESP32\"}");
   
   digitalWrite(ledPin, HIGH);
   delay(1000);

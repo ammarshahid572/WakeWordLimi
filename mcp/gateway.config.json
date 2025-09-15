@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "echo-service": {
+      "image": "mcp-server:latest",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  }
+}

@@ -45,7 +45,16 @@ First, I wanted to build entire project from scratch myself but given the short 
         -- I copied a demo code (porcupineDemo.py) for testing of wake word detection 
         -- added .env file to hide Access key from git 
 
-    
     In firmware I changed the code to also publish a message on a different topic indicating the processing has been done. 
 
 
+
+## Third Iteration
+    First Create a backend service (backend.py) that listens to MQTT messages and calls an MCP service and test it.
+    Next Create a simple Mcp dockerized container, this one uses stdin to be called, and test it.
+    ~~Now use Docker MCP gateway to present an endpoint our backend can call via HTTP.~~
+    Make backend call the service. 
+
+
+
+ 
