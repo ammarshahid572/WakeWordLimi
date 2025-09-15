@@ -10,10 +10,7 @@ First, I wanted to build entire project from scratch myself but given the short 
     
     Created Git Remote
 
-
-
-
-# Got base codes from ChatGPT, these I will use as templates and fix as I build.
+ Got base codes from ChatGPT, these I will use as templates and fix as I build.
     Got wakeWordDetection.py
     Got firmware/Esp32-wake-word/src/main.cpp  <- I am using platform IO as it is faster and has intellisense
 
@@ -23,6 +20,8 @@ First, I wanted to build entire project from scratch myself but given the short 
     For python:
         paho-mqtt 
         portaudio
+        flask
+        flask_socketio 
     
     For Esp32:
         PubSubClient.h 
@@ -52,8 +51,22 @@ First, I wanted to build entire project from scratch myself but given the short 
 ## Third Iteration
     First Create a backend service (backend.py) that listens to MQTT messages and calls an MCP service and test it.
     Next Create a simple Mcp dockerized container, this one uses stdin to be called, and test it.
-    ~~Now use Docker MCP gateway to present an endpoint our backend can call via HTTP.~~
-    Make backend call the service. 
+    
+    Now use Docker MCP gateway to present an endpoint our backend can call via HTTP. 
+    Ran into Docker Desktop and Setup issues for MCP. 
+    
+    Made the backend call the service directly via stdin. 
+
+
+## Fourth Iteration
+    Used Grafana Enterprise docker container to make the dashboard. 
+    Grafana Mqtt memory limited and gets erased too quickly
+
+    Made a simple frontend with Flask, SocketIO
+
+
+
+
 
 
 
