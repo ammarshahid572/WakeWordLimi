@@ -19,7 +19,7 @@ void callback(char* topic, byte* message, unsigned int length) {
   Serial.println(msg);
   
   digitalWrite(ledPin, HIGH);
-  delay(500);
+  delay(1000);
   digitalWrite(ledPin, LOW);
 }
 
@@ -38,6 +38,10 @@ void setup() {
   Serial.begin(115200);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) delay(500);
+  Serial.println("Connected to WiFi");
+  digitalWrite(ledPin, HIGH);
+  delay(1000);
+  digitalWrite(ledPin, LOW);
   
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);

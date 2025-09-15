@@ -30,4 +30,7 @@ First, I wanted to build entire project from scratch myself but given the short 
 
 # Dev Time line:
 ## First Iteration: 
-    -- Check wakeWordDetection.py, 
+    Setup Mosquito Mqtt to allow connections outside of localhost. 
+     
+    -- Check wakeWordDetection.py, to see if its sending messages. without wake word
+    -- Check firmware src main.cpp, to see if its receiving the messages 
