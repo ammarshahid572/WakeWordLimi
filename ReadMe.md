@@ -62,7 +62,16 @@ First, I wanted to build entire project from scratch myself but given the short 
     Used Grafana Enterprise docker container to make the dashboard. 
     Grafana Mqtt memory limited and gets erased too quickly
 
-    Made a simple frontend with Flask, SocketIO
+    Made a simple frontend with Flask, SocketIO to show events as they happen
+
+
+## Finalize and Cleanup
+    Moved backend.py to backend/
+    Moved wakewordDetection.py to wakeword/
+    Moved porcupineDemo.py to wakeword/
+
+
+
 
 
 
