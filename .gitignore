@@ -4,3 +4,4 @@ include
 pyvenv.cfg
 firmware/.pio
 firmware/.vscode
+.env

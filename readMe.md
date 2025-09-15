@@ -1,5 +1,5 @@
+# Introduction 
 This file shows my process as I am following it. 
-
 First, I wanted to build entire project from scratch myself but given the short deadline time I will follow fast option.
 
 # Environment Setup.
@@ -22,6 +22,7 @@ First, I wanted to build entire project from scratch myself but given the short 
 # Libraries Setup:
     For python:
         paho-mqtt 
+        portaudio
     
     For Esp32:
         PubSubClient.h 
@@ -32,5 +33,19 @@ First, I wanted to build entire project from scratch myself but given the short 
 ## First Iteration: 
     Setup Mosquito Mqtt to allow connections outside of localhost. 
      
-    -- Check wakeWordDetection.py, to see if its sending messages. without wake word
-    -- Check firmware src main.cpp, to see if its receiving the messages 
+    -- Check wakeWordDetection.py, to see if its sending messages. without wake word.
+    -- Check firmware src main.cpp, to see if its receiving the messages  
+
+## Second Iteration:
+    Integration of Wake word detection using snowboy.
+        -- Needed to install dependencies, challenge in pyaudio as it requires portaudio which in newer linux system has to be installed manually.
+        -- issues with installation, as the repo isnt maintained for quite a while
+
+    Integration of Porcupine, 
+        -- I copied a demo code (porcupineDemo.py) for testing of wake word detection 
+        -- added .env file to hide Access key from git 
+
+    
+    In firmware I changed the code to also publish a message on a different topic indicating the processing has been done. 
+
+

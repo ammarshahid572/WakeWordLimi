@@ -1,23 +1,8 @@
-# pi_app.py
-import json
-import paho.mqtt.client as mqtt
-import time
-import random
-        
 import pvporcupine
 import pyaudio
 import struct
 import os
 from dotenv import load_dotenv
-
-BROKER = "localhost"
-TOPIC = "wakeword/events"
-
-client = mqtt.Client()
-client.connect(BROKER, 1883, 60)
-
-       
-
 
 load_dotenv()
 # Initialize Porcupine with a built-in wake word
@@ -45,14 +30,6 @@ try:
 
         if result >= 0:
             print("Wake word detected!")
-            payload = {
-            "event": "wakeword_detected",
-            "timestamp": time.time(),
-            "command_id": random.randint(1000, 9999)
-            }
-            client.publish(TOPIC, json.dumps(payload))
-            print("Wake word detected → published:", payload)
-            
 
 except KeyboardInterrupt:
     print("Stopping...")
